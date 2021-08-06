@@ -1,7 +1,6 @@
 streamlit
 torch
 numpy == 1.19.2
-cv2
 onnxruntime
 onnx
 PIL
