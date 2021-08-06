@@ -1,7 +1,7 @@
-streamlit==0.82.0
-torch==1.8.1
+streamlit
+torch
+numpy == 1.19.2
 cv2
 onnxruntime
 onnx
-numpy == 1.19.2
 PIL
