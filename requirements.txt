@@ -1,7 +1,7 @@
 streamlit==0.82.0
 torch==1.8.1
-cv2 == 4.0.1
-onnxruntime == 1.8.1
-onnx == 1.10.1
+cv2
+onnxruntime
+onnx
 numpy == 1.19.2
-PIL == 8.0.1
+PIL
