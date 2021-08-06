@@ -19,7 +19,8 @@ def label_decode(x):
 
 def get_prediction(img):
     img = cv2.resize(img, (256, 256))
-    ort_inputs = {ort_session.get_inputs()[0].name: np.array(img).reshape(1, 3, 256, 256)}
+    img = np.asarray(img, dtype = np.float32, order = "C").reshape(1, 3, 256, 256)
+    ort_inputs = {ort_session.get_inputs()[0].name: img}
     logits = ort_session.run(None, ort_inputs)
     prob = probs(torch.tensor(logits).float().reshape(-1))
     top_p, top_class = prob.topk(1)
